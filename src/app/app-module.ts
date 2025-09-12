@@ -3,17 +3,33 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { HomeComponent } from './home-component/home-component';
+import { FooterComponent } from './footer-component/footer-component';
+import { BookComponent } from './book-component/book-component';
+import { ClientComponent } from './client-component/client-component';
+import { NavBarComponent } from './nav-bar-component/nav-bar-component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    HomeComponent,
+    FooterComponent,
+    BookComponent,
+    ClientComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    provideHttpClient()
   ],
   bootstrap: [App]
 })

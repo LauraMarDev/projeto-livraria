@@ -1,0 +1,5 @@
+{
+  "books": [
+    { "id": 1, "title":"Por uma outra Globalização", "author":"Milton Santos", "year": 2000, "gender": "Política", "publisher":"Record"}
+  ]
+}

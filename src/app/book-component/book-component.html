@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="display-4 text-center mt-3">Cadastro de Livros</div>
+        <form [formGroup]="formGroupBooks"></form>
+            <form>
+                <div class="mb-3">
+                    <label for="inputId" class="form-label">Id</label>
+                    <input formControlName="id" type="number" class="form-control" id="inputId" aria-describedby="IdHelp">
+                    <div id="IdHelp" class="form-text">Insira o código do livro.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="inputTitle" class="form-label">Nome</label>
+                    <input formControlName="title" type="text" class="form-control" id="inputTitle" aria-describedby="TitleHelp">
+                    <div id="TitleHelp" class="form-text">Insira o título do livro.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="inputAuthor" class="form-label">Autor</label>
+                    <input formControlName="author" type="text" class="form-control" id="inputAuthor" aria-describedby="AutorHelp">
+                    <div id="AuthorHelp" class="form-text">Insira o autor do livro.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="inputYear" class="form-label">Ano de publicação</label>
+                    <input formControlName="year" type="number" class="form-control" id="inputYear"
+                        aria-describedby="YearHelp">
+                    <div id="YearHelp" class="form-text">Insira o ano de publicação do livro.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputGender" class="form-label">Gênero</label>
+                    <input formControlName="gender" type="text" class="form-control" id="inputGender"
+                        aria-describedby="GenderHelp">
+                    <div id="GenderHelp" class="form-text">Insira o gênero literário qual o livro pertence.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputPublisher" class="form-label">Editora</label>
+                    <input formControlName="publisher" type="text" class="form-control" id="inputPublisher"
+                        aria-describedby="PublisherHelp">
+                    <div id="PublisherHelp" class="form-text">Insira o ano de publicação do livro.</div>
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="save()">Salvar</button>
+            </form>
+</div>
