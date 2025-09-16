@@ -1,5 +1,11 @@
 {
   "books": [
     { "id": 1, "title":"Por uma outra Globalização", "author":"Milton Santos", "year": 2000, "gender": "Política", "publisher":"Record"}
+  ],
+
+  "clients": [
+    {
+      "idClient": 1, "nameClient":"João Lucas", "phoneClient":"(15) 4002-8922", "emailClient":"joao.lucas@gmail.com"
+    }
   ]
 }

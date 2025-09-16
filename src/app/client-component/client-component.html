@@ -1,1 +1,54 @@
-<p>client-component works!</p>
+
+<div class="container">
+    <div class="display-4 text-center mt-3">Cadastro de Clientes</div>
+        <form [formGroup]="formGroupClients"></form>
+            <form>
+                <div class="mb-3">
+                    <label for="inputIdClient" class="form-label">♡ Id</label>
+                    <input formControlName="idClient" type="number" class="form-control" id="inputId" aria-describedby="IdHelp">
+                    <div id="IdHelp" class="form-text">Insira o código.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="inputName" class="form-label">♡ Nome completo</label>
+                    <input formControlName="nameClient" type="text" class="form-control" id="inputName" aria-describedby="NameHelp">
+                    <div id="NameHelp" class="form-text">Insira o nome completo.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="inputPhone" class="form-label">♡ Celular</label>
+                    <input formControlName="phoneClient" type="text" class="form-control" id="inputPhone" aria-describedby="PhoneHelp">
+                    <div id="PhoneHelp" class="form-text">Insira o número de telefone.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="inputEmail" class="form-label">♡ Email</label>
+                    <input formControlName="emailClient" type="text" class="form-control" id="inputEmail"
+                        aria-describedby="EmailHelp">
+                    <div id="EmailHelp" class="form-text">Insira o e-mail.</div>
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="save()">Salvar</button>
+            </form>
+
+            <br>
+            ♡ Total de produtos: {{clients.length}}
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Nº de clientes</th>
+                    <th scope="col">♡ Nome</th>
+                    <th scope="col">♡ Celular</th>
+                    <th scope="col">♡ E-mail</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let c of clients">
+                    <th scope="row">{{c.idClient}}</th>
+                    <td>{{c.nameClient}}</td>
+                    <td>{{c.phoneClient}}</td>
+                    <td>{{c.emailClient}}</td>
+                </tr>
+                </tbody>
+            </table>
+
+</div>
